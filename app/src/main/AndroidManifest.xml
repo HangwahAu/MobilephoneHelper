@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ApplicationFragment" />
-        <activity android:name=".ManageFragment"></activity>
+        <activity android:name=".Application.ApplicationFragment" />
+        <activity android:name=".Manage.ManageFragment" />
+        <activity android:name=".Manage.AppManageFragment" />
+        <activity android:name=".Application.Games" />
     </application>
 
 </manifest>

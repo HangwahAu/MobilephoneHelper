@@ -8,6 +8,9 @@ import android.os.Bundle;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.example.oukenghua.mobilephonehelper.Application.ApplicationFragment;
+import com.example.oukenghua.mobilephonehelper.Manage.ManageFragment;
+import com.example.oukenghua.mobilephonehelper.Selection.SelectionFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
 
