@@ -21,22 +21,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import com.example.oukenghua.mobilephonehelper.Selection.Select;
 
 
 public class SelectionFragment extends Fragment {
 
-    private Select[] selects = {new Select("王者荣耀",R.drawable.wzry),
-            new Select("美图秀秀",R.drawable.mtxx),new Select("百度贴吧",R.drawable.bdtb),new Select("优酷",R.drawable.yk),
-            new Select("QQ",R.drawable.qq),new Select("去哪儿",R.drawable.qne),new Select("捕鱼达人",R.drawable.bydr),
-            new Select("UC浏览器",R.drawable.uc),new Select("天天P图",R.drawable.ttpt),new Select("爱奇艺",R.drawable.aqy),
-            new Select("微信",R.drawable.wx),new Select("AcFun",R.drawable.az),new Select("小影",R.drawable.xy),new Select("QQ浏览器",R.drawable.qqllq),
-            new Select("虎扑",R.drawable.hp),new Select("简拼",R.drawable.jp),new Select("消消乐",R.drawable.xxl),
-            new Select("欢乐斗地主",R.drawable.ddz),new Select("旺信",R.drawable.wangx),new Select("美颜相机",R.drawable.myxj),
-            new Select("12306",R.drawable.tl),new Select("央视新闻",R.drawable.ys),new Select("人人网",R.drawable.rrw),
-            new Select("迅雷",R.drawable.xl),new Select("艺龙旅行",R.drawable.yl),new Select("猎豹浏览器",R.drawable.lb),
-            new Select("QQ音乐",R.drawable.qqyy),new Select("新浪微博",R.drawable.xlwb),new Select("人民日报",R.drawable.rmrb),
-            new Select("携程",R.drawable.xc),new Select("我叫MT",R.drawable.wjmt),new Select("OFO共享单车",R.drawable.ofo),
-            new Select("网易云音乐",R.drawable.wyy),new Select("ES文件浏览器",R.drawable.es),new Select("凤凰新闻",R.drawable.fhxw)};
+
     private List<Select> selectList = new ArrayList<>();
     private SelectAdapter adapter;
 
@@ -115,9 +105,9 @@ public class SelectionFragment extends Fragment {
     }
 
     private void initSelects(){
-        int num[] = randomCommon(0,34,12);
+        int num[] = randomCommon(0,35,12);
         for(int i=0;i<12;i++){
-            selectList.add(selects[num[i]]);
+            selectList.add(Select.selects[num[i]]);
         }
     }
 
