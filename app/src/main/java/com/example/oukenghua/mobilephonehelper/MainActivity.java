@@ -3,16 +3,23 @@ package com.example.oukenghua.mobilephonehelper;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -67,6 +74,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         transaction.commit();
 
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //MenuItem menuItem = menu.findItem(R.id.search);
+        //SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+        //searchView.setSubmitButtonEnabled(true);//设置是否显示搜索按钮
+        //searchView.setQueryHint("输入应用名查找");//设置提示信息
+        //searchView.setIconifiedByDefault(true);//设置搜索默认为图标
+        return true;
+    }*/
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
