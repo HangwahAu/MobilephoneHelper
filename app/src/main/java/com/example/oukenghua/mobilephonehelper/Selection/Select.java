@@ -13,13 +13,15 @@ public class Select {
     private double size;
     private String content;
     private String link;
+    private int logoId;
 
-    public Select(String name,int imageId,double size,String content,String link){
+    public Select(String name,int imageId,double size,String content,String link,int logoId){
         this.name = name;
         this.imageId = imageId;
         this.size = size;
         this.content = content;
         this.link = link;
+        this.logoId = logoId;
     }
 
     public String getName() {
@@ -42,10 +44,14 @@ public class Select {
         return link;
     }
 
-    public static Select[] selects = {new Select("王者荣耀", R.drawable.wzry,424.11,"《王者荣耀》是一款全新的5V5英雄公平对战手游，腾讯重磅MOBA手游大作！5V5王者峡谷、5V5深渊大乱斗、以及3V3、1V1等多样模式一键体验，热血竞技尽享快感！海量英雄随心选择，精妙配合默契作战！10秒实时跨区匹配，与好友组队登顶超强王者！操作简单易上手，一血、五杀、超神，极致还原经典体验！实力操作公平对战，回归MOBA初心！赶快加入《王者荣耀》，随时开启你的团战！","http://apk.hiapk.com/appdown/com.tencent.tmgp.sgame?em=5&p=android&f_name=王者荣耀"),
+    public int getLogoId() {
+        return logoId;
+    }
+
+    public static Select[] selects = {new Select("王者荣耀", R.drawable.wzry,424.11,"《王者荣耀》是一款全新的5V5英雄公平对战手游，腾讯重磅MOBA手游大作！5V5王者峡谷、5V5深渊大乱斗、以及3V3、1V1等多样模式一键体验，热血竞技尽享快感！海量英雄随心选择，精妙配合默契作战！10秒实时跨区匹配，与好友组队登顶超强王者！操作简单易上手，一血、五杀、超神，极致还原经典体验！实力操作公平对战，回归MOBA初心！赶快加入《王者荣耀》，随时开启你的团战！","http://apk.hiapk.com/appdown/com.tencent.tmgp.sgame?em=5&p=android&f_name=王者荣耀",R.drawable.wzryl),
             new Select("美图秀秀",R.drawable.mtxx,51.8,"全球超受欢迎的图片处理软件，美图公司荣誉出品\n" +
                     "超过5亿用户正在使用！安卓手机装机必备\n" +
-                    "众多大牌明星红人联合推荐，来和明星一起用美图秀秀","http://apk.hiapk.com/appdown/com.mt.mtxx.mtxx?em=5&p=android&f_name=美图秀秀"),
+                    "众多大牌明星红人联合推荐，来和明星一起用美图秀秀","http://apk.hiapk.com/appdown/com.mt.mtxx.mtxx?em=5&p=android&f_name=美图秀秀",R.drawable.mtxxl),
             new Select("百度贴吧",R.drawable.bdtb,38.79,"百度贴吧手机客户端 --- 上贴吧，找组织！由于系统版本的问题，部分Android2.3系统的用户无法安装贴吧，请升级系统至更高版本后安装。\n" +
                     "百度贴吧是以兴趣主题聚合志同道合者的互动平台。从2003年至今，百度贴吧拥有6亿注册用户，800万贴吧。在这里，每天都在诞生神贴，这里是当今网络新文化的发源地。每天都有数千万用户在贴吧找到自己所属的组织。\n" +
                     "贴吧手机客户端，更方便找到属于你的组织，选择你喜欢的星球，找到精彩兴趣吧，轻松定制专属你的首页内容。\n" +
@@ -53,11 +59,11 @@ public class Select {
                     "如果你爱好休闲活动，摄影吧、钓鱼吧、推理题吧、骑行吧等400多个吧会让你结识很多伙伴；\n" +
                     "如果你是收藏达人，手工吧、翡翠吧、手办吧、文玩吧、模型吧等700多个吧等你来晒晒珍藏；\n" +
                     "如果你是明星粉丝，体育追星狂，动漫爱好者，游戏玩家，美食达人，文艺青年，贴吧会满足你所有的兴趣，同样会带你认识有共同爱好的朋友。\n" +
-                    "欢迎访问“贴吧客户端反馈吧”提出您的宝贵意见或建议。","http://apk.hiapk.com/appdown/com.baidu.tieba?em=5&p=android&f_name=百度贴吧"),
+                    "欢迎访问“贴吧客户端反馈吧”提出您的宝贵意见或建议。","http://apk.hiapk.com/appdown/com.baidu.tieba?em=5&p=android&f_name=百度贴吧",R.drawable.bdtbl),
             new Select("优酷",R.drawable.yk,73.35,"一次相遇\n" +
                     "一段故事\n" +
                     "一个全新的开始\n" +
-                    "优酷 这世界很酷","http://apk.hiapk.com/appdown/com.youku.phone?em=5&p=android&f_name=优酷"),
+                    "优酷 这世界很酷","http://apk.hiapk.com/appdown/com.youku.phone?em=5&p=android&f_name=优酷",R.drawable.ykl),
             new Select("QQ",R.drawable.qq,42.38,"-----QQ·乐在沟通-----\n" +
                     "\n" +
                     "√服务超过90%的移动互联网用户\n" +
@@ -77,15 +83,15 @@ public class Select {
                     "·移动支付：话费充值、网购、转账收款，一应俱全。\n" +
                     "·QQ看点：专为年轻人打造的个性化内容推荐平台。\n" +
                     "\n" +
-                    "乐在沟通18年，聊天欢乐9亿人！","http://apk.hiapk.com/appdown/com.tencent.mobileqq?em=5&p=android&f_name=QQ"),
+                    "乐在沟通18年，聊天欢乐9亿人！","http://apk.hiapk.com/appdown/com.tencent.mobileqq?em=5&p=android&f_name=QQ",R.drawable.q),
             new Select("去哪儿旅行",R.drawable.qne,37.33,"去哪儿旅行—总有你要的低价！ \n" +
                     "作为中国领先的无线和在线旅游平台，去哪儿旅行支持用户低价购买近60万条国内国际航线，42万家国内酒店、16万家国际酒店；超100万条国内外度假线路和2万种景点门票；享受国内160座城市，以及国外86座城市的在线叫车、自驾等服务。 \n" +
                     "通过移动客户端的全平台覆盖，去哪儿旅行有吃住行游购娱一站式解决方案，随时随地搜索和预订国内外机票、酒店、度假、租车、接送机、火车票和团购等旅行信息。超过80%的低价占比和全面丰富的旅行产品，帮助旅行者找到性价比高的产品和优质的的信息，聪明地安排旅行。 \n" +
-                    "去哪儿网移动客户端“去哪儿旅行”是中国旅行类较受欢迎的移动应用，目前拥有超过10亿的激活下载量，增速高于行业平均水平，总用户量、以及月度覆盖人数位居榜首。中国互联网络信息中心发布的中国网民在线旅行预订行为调查报告中，去哪儿旅行客户端总用户下载量居首，活跃用户突破3000万大关。","http://apk.hiapk.com/appdown/com.Qunar?em=5&p=android&f_name=去哪儿旅行"),
+                    "去哪儿网移动客户端“去哪儿旅行”是中国旅行类较受欢迎的移动应用，目前拥有超过10亿的激活下载量，增速高于行业平均水平，总用户量、以及月度覆盖人数位居榜首。中国互联网络信息中心发布的中国网民在线旅行预订行为调查报告中，去哪儿旅行客户端总用户下载量居首，活跃用户突破3000万大关。","http://apk.hiapk.com/appdown/com.Qunar?em=5&p=android&f_name=去哪儿旅行",R.drawable.qnel),
             new Select("捕鱼达人2",R.drawable.bydr,35.8,"1、 加入了更丰富的任务，取消了任务的完成时限，捕鱼达人们可以获得更丰富的任务奖励了。\n" +
                     "2、 新增VIP系统，充值可以获得更多福利。\n" +
                     "3、 首屏和主界面增加商城图标，捕鱼达人们可以更顺利地进入商城中购买金币了。\n" +
-                    "4、 新增任务和活动类型。","http://apk.hiapk.com/appdown/org.cocos2dx.FishingJoy2?em=5&p=android&f_name=捕鱼达人2"),
+                    "4、 新增任务和活动类型。","http://apk.hiapk.com/appdown/org.cocos2dx.FishingJoy2?em=5&p=android&f_name=捕鱼达人2",R.drawable.bydrl),
             new Select("UC浏览器",R.drawable.uc,11.66,"UC浏览器是全球领先的智能手机浏览器，与原\n" +
                     " U3内核和云端技术，完美支持HTML5应用程序，\n" +
                     "与智力，速度，安全性，可扩展性，方便允许你读取信息，\n" +
@@ -95,13 +101,13 @@ public class Select {
                     "智能将您喜爱的网站和移动视频在您的指尖与智能\n" +
                     "搜索，易于使用的标签和桌面到移动设备同步功能\n" +
                     "安全 - 确保您的Android网页浏览器保持安全及私人广泛\n" +
-                    "安全设置，附加功能，如不跟踪","http://apk.hiapk.com/appdown/com.ijiaaMobile.uc?em=5&p=android&f_name=UC浏览器"),
+                    "安全设置，附加功能，如不跟踪","http://apk.hiapk.com/appdown/com.ijiaaMobile.uc?em=5&p=android&f_name=UC浏览器",R.drawable.ucl),
             new Select("天天P图",R.drawable.ttpt,56.28,"自拍相机：实时美颜、美妆、滤镜，海量动效素材，自拍更美更好玩\n" +
                     "美化照片：简单实用照片编辑功能，专业特效、贴纸、文字、涂鸦笔，应有尽有 \n" +
                     "美容美妆：打造精致妆容，美颜、大眼、瘦脸、亮眼、粉底、唇彩、眼影、染发等实用能力\n" +
                     "疯狂变妆：大圣妆、萌猫妆、海盗妆、吸血鬼妆、疯狂无上限 \n" +
                     "故事拼图：海量丰富的时尚拼图模板，智能水印，拼出你的故事\n" +
-                    "魔法抠图：P图法宝！轻松抠图，趣味场景，3D效果，打造魔法趣味","http://apk.hiapk.com/appdown/com.tencent.ttpic?em=5&p=android&f_name=天天P图"),
+                    "魔法抠图：P图法宝！轻松抠图，趣味场景，3D效果，打造魔法趣味","http://apk.hiapk.com/appdown/com.tencent.ttpic?em=5&p=android&f_name=天天P图",R.drawable.ttptl),
             new Select("爱奇艺",R.drawable.aqy,27.81,"【海量视频 抢先看】\n" +
                     "《楚乔传》：赵丽颖翘楚出鞘，林更新、窦骁、邓伦、李沁倾力助攻\n" +
                     "《夏至未至》：陈学冬、郑爽、白敬亭同绘萤火盛夏\n" +
@@ -117,20 +123,20 @@ public class Select {
                     "《废柴兄弟5》：青岛大妈、孙艺洲再发力，超级解压神剧来袭\n" +
                     "《幸福的错觉》：当红小生和实力演技派同台飙值得期待\n" +
                     "《吃光全宇宙》：曾宝仪、王青、刘维、陈瑶明星吃货团开启综艺版的“舌尖上的宇宙” \n" +
-                    "《中国有嘻哈》：吴亦凡、潘玮柏、张震岳&热狗(MC Hotdog) RAP你的暑假","http://apk.hiapk.com/appdown/com.qiyi.video?em=5&p=android&f_name=爱奇艺"),
+                    "《中国有嘻哈》：吴亦凡、潘玮柏、张震岳&热狗(MC Hotdog) RAP你的暑假","http://apk.hiapk.com/appdown/com.qiyi.video?em=5&p=android&f_name=爱奇艺",R.drawable.aqyl),
             new Select("微信",R.drawable.wx,40.86,"1.可以发语音、文字消息、表情、图片、视频30M流量可以收发上千条语音，省电省流量 \n" +
                     "2.朋友圈，跟朋友们分享生活点滴 \n" +
                     "3.摇一摇、查看附近的人，世界不再有陌生人 \n" +
                     "4.扫一扫，可以扫商品条码、图书封面、CD封面，甚至扫描英文单词来翻译成中文 \n" +
                     "5.公众帐号，用微信关注明星、看新闻、设提醒 \n" +
                     "6.游戏中心，和朋友们一起玩游戏 \n" +
-                    "7.表情商店，有趣好玩的表情在这里特别说明：微信只消耗网络流量，不产生短信电话费用","http://apk.hiapk.com/appdown/com.tencent.mm?em=5&p=android&f_name=微信"),
+                    "7.表情商店，有趣好玩的表情在这里特别说明：微信只消耗网络流量，不产生短信电话费用","http://apk.hiapk.com/appdown/com.tencent.mm?em=5&p=android&f_name=微信",R.drawable.wxl),
             new Select("AcFun",R.drawable.az,31.39,"作为国内第一家弹幕视频网，这里的充满了欢乐与疯狂！我们用二次元的视角，看待世界的一切！\n" +
                     "【弹幕评论】和大家一起分享看视频的心得，体验实时互动。\n" +
                     "【视频分享】鬼畜恶搞、影视新番、萌妹糙汉，各路大神，前沿资讯，你想看的，应有尽有！\n" +
                     "【文章专区】奇葩哪儿都有，这里特别多！看别人的故事，吐自己的槽！\n" +
                     "【社区文化】这是一个充满哲学、同性、恶搞的疯狂网站。在这里，你要学会吐槽与互相伤害，最终进化为新人类（单身）！\n" +
-                    "喜欢Acfun吗？喜欢AC娘吗？喜欢赶紧点击下载，和我们一起打倒电视大魔王吧！","http://apk.hiapk.com/appdown/tv.acfundanmaku.video?em=5&p=android&f_name=AcFun"),
+                    "喜欢Acfun吗？喜欢AC娘吗？喜欢赶紧点击下载，和我们一起打倒电视大魔王吧！","http://apk.hiapk.com/appdown/tv.acfundanmaku.video?em=5&p=android&f_name=AcFun",R.drawable.acfun),
             new Select("小影",R.drawable.xy,42.33,"独家「视频美颜」+ 海量「动画贴纸」+ 强大「视频剪辑」+ 创意「搞怪变声」\n" +
                     "美国，法国，韩国，巴西等10个国家视频榜排名在前，亿万用户的选择！\n" +
                     "就是神（牛）器（逼）~ \n" +
@@ -155,7 +161,7 @@ public class Select {
                     "\n" +
                     "【轻松分享】\n" +
                     "- 一键分享至微信、QQ、微博等热门社交圈！\n" +
-                    "- 私密视频单独发送~","http://apk.hiapk.com/appdown/com.quvideo.xiaoying?em=5&p=android&f_name=小影"),
+                    "- 私密视频单独发送~","http://apk.hiapk.com/appdown/com.quvideo.xiaoying?em=5&p=android&f_name=小影",R.drawable.xyl),
             new Select("QQ浏览器",R.drawable.qqllq,26.95,"QQ浏览器，6亿用户上网必备APP，全新内容升级改版，全球热点随时享，更懂你选择\n" +
                     "【直播】聚合全网火爆直播平台，热点播报一网打尽，在这里遇见最美女神，随时预约名人直播间，更多热点及时推送\n" +
                     "【WiFi】五星WiFi一键连，星级评分，无需密码一键认证，免费WiFi智能推荐，提醒更适时贴心免骚扰\n" +
@@ -163,7 +169,7 @@ public class Select {
                     "【小说】热门小说安全下载，畅快阅读不费流量，边读边评论，随时查看你喜爱明星的阅读笔记，限免专区正版书籍等你来\n" +
                     "【新奇】奇闻爆点，糗事百科内涵图片，暴走漫画，星座测试人人喜爱，让百思姐在浏览器撩出生活新趣味\n" +
                     "【游戏】聚合全网火爆热门手游，火影忍者、王者荣耀、诛仙、征途、蜀山传奇、剑灵，福利礼包应有尽有\n" +
-                    "【影视】优酷、爱奇艺、乐视等国内35家视频网站，全网15万电影、电视剧、综艺、动漫等海量高清视频","http://apk.hiapk.com/appdown/com.tencent.mtt?em=5&p=android&f_name=QQ浏览器"),
+                    "【影视】优酷、爱奇艺、乐视等国内35家视频网站，全网15万电影、电视剧、综艺、动漫等海量高清视频","http://apk.hiapk.com/appdown/com.tencent.mtt?em=5&p=android&f_name=QQ浏览器",R.drawable.qqllql),
             new Select("虎扑体育",R.drawable.hp,17.1,"千万球迷强烈推荐——虎扑体育App。\n" +
                     "虎扑体育带你看NBA、CBA、中超、英超、西甲、德甲、意甲、法甲、欧冠、欧联、奥运会等赛事的精彩。现在迎来NBA季后赛，CBA季后赛，CCTV直播中国男足世预赛，新闻，视频，积分榜数据等！你可以和数百万体育迷一起畅聊体育。\n" +
                     "- 篮球：nba、CBA直播、实时新闻、趣味竞猜、数据统计，直观展示球员投篮分布图、投篮热图、臂展资料；\n" +
@@ -174,7 +180,7 @@ public class Select {
                     "球迷们这样评价我们：\n" +
                     "超爱清新女王安妮，暴走萝莉信堂，漂亮又懂球的高颜值视频主播。 —@不是懂球帝\n" +
                     "宅男必备三神器，虎扑，知乎加斗鱼。—＠重新浪吧\n" +
-                    "虎扑特别人性化，就像一盏灯，很黄，但是很温暖。—＠来看nba直播吧","http://apk.hiapk.com/appdown/com.hupu.games?em=5&p=android&f_name=虎扑体育-NBACBA欧冠英超"),
+                    "虎扑特别人性化，就像一盏灯，很黄，但是很温暖。—＠来看nba直播吧","http://apk.hiapk.com/appdown/com.hupu.games?em=5&p=android&f_name=虎扑体育-NBACBA欧冠英超",R.drawable.hpl),
             new Select("简拼",R.drawable.jp,52.6,"^^功能介绍^^\n" +
                     "1、强大的文字编辑功能：帮助你更好的记录心情、分享攻略。\n" +
                     "2、简约拼图：主打文艺留白，提升个人风格。\n" +
@@ -187,7 +193,7 @@ public class Select {
                     "9、长图拼接：无限量图文混排，玩转长微博&游记，长图更详尽。\n" +
                     "10、生活标签：地点、品牌、天气、价格，让你随时晒出高品质生活。\n" +
                     "11、贴心教程：手机里的美学导师，看教程让作品更有设计感。\n" +
-                    "12、Timeline：用时间抽记录每一个作品，让作品乖乖排队。","http://apk.hiapk.com/appdown/cn.poco.jane?em=5&p=android&f_name=简拼"),
+                    "12、Timeline：用时间抽记录每一个作品，让作品乖乖排队。","http://apk.hiapk.com/appdown/cn.poco.jane?em=5&p=android&f_name=简拼",R.drawable.jpl),
             new Select("开心消消乐",R.drawable.xxl,87.5,"《开心消消乐》，超好玩三消游戏、5亿玩家的共同选择！\n" +
                     "【App Store下载量榜首，全市场重磅推荐】\n" +
                     "【玩法丰富，创意无限】\n" +
@@ -199,8 +205,8 @@ public class Select {
                     "【场景清新，特效华丽】\n" +
                     "清新的藤蔓场景，明晰的面板设计，华丽爽快的特效效果，还有萌动有趣的小动物们，定会陪您度过欢乐休闲时光~\n" +
                     "【游戏玩法】\n" +
-                    "滑动手指让三个及以上的同色小动物横竖相连即可消除，完成每关的指定消除目标即可过关！","http://apk.hiapk.com/appdown/com.happyelements.AndroidAnimal?em=5&p=android&f_name=开心消消乐®"),
-            new Select("欢乐斗地主",R.drawable.ddz,99.54,"QQ游戏推出的“欢乐斗地主(完整版)”是包含斗地主经典玩法和癞子玩法的合集版本，同时加入挑战赛模式。特别为安卓用户量身定制，您可以与百万QQ游戏大厅玩家同桌竞技，在游戏中感受到无处不在的欢乐！ 【支持癞子玩法和其他玩法】首款手机端支持癞子玩法的斗地主游戏，还有任务，抢地主，明牌，加倍等玩法，刺激好玩的玩法提升游戏乐趣！ 【挑战赛模式】加入QQ游戏大厅的欢乐斗地主中广受玩家喜爱的挑战赛模式！让您在手机上也能体验到永不落幕的比赛，享受冲击冠军的刺激，感受竞技的乐趣！ 【与QQ游戏大厅完全互通】数据与QQ游戏大厅完全互通，与亿万玩家同桌竞技，真正感受无处不在的欢乐！ 【真实场景化游戏界面】这一次，您将更真实的坐在牌桌上和网友一起欢乐斗地主，真实场景化的游戏界面，让您感受家一般的温馨。 【支持游戏换肤】游戏界面支持更换背景，“绿野仙踪”、“田园踏青”、“恬静书院”、“斗神擂台”……想闲暇对弈，还是激烈对战，游戏氛围您来选！ 【贴近真实打牌体验】真实的出牌体验，出牌不再凭空出现和消失，而是一直保留在桌上直到本局结束。后续还将加入手牌飞行动画，让你体验真实的打牌流程","http://apk.hiapk.com/appdown/com.qqgame.hlddz?em=5&p=android&f_name=欢乐斗地主"),
+                    "滑动手指让三个及以上的同色小动物横竖相连即可消除，完成每关的指定消除目标即可过关！","http://apk.hiapk.com/appdown/com.happyelements.AndroidAnimal?em=5&p=android&f_name=开心消消乐®",R.drawable.xxll),
+            new Select("欢乐斗地主",R.drawable.ddz,99.54,"QQ游戏推出的“欢乐斗地主(完整版)”是包含斗地主经典玩法和癞子玩法的合集版本，同时加入挑战赛模式。特别为安卓用户量身定制，您可以与百万QQ游戏大厅玩家同桌竞技，在游戏中感受到无处不在的欢乐！ 【支持癞子玩法和其他玩法】首款手机端支持癞子玩法的斗地主游戏，还有任务，抢地主，明牌，加倍等玩法，刺激好玩的玩法提升游戏乐趣！ 【挑战赛模式】加入QQ游戏大厅的欢乐斗地主中广受玩家喜爱的挑战赛模式！让您在手机上也能体验到永不落幕的比赛，享受冲击冠军的刺激，感受竞技的乐趣！ 【与QQ游戏大厅完全互通】数据与QQ游戏大厅完全互通，与亿万玩家同桌竞技，真正感受无处不在的欢乐！ 【真实场景化游戏界面】这一次，您将更真实的坐在牌桌上和网友一起欢乐斗地主，真实场景化的游戏界面，让您感受家一般的温馨。 【支持游戏换肤】游戏界面支持更换背景，“绿野仙踪”、“田园踏青”、“恬静书院”、“斗神擂台”……想闲暇对弈，还是激烈对战，游戏氛围您来选！ 【贴近真实打牌体验】真实的出牌体验，出牌不再凭空出现和消失，而是一直保留在桌上直到本局结束。后续还将加入手牌飞行动画，让你体验真实的打牌流程","http://apk.hiapk.com/appdown/com.qqgame.hlddz?em=5&p=android&f_name=欢乐斗地主",R.drawable.ddzl),
             new Select("旺信",R.drawable.wangx,23.4,"- 淘宝账号直接登录，可在PC旺旺、手机淘宝、旺信等多个端实现聊天记录多端同步。\n" +
                     "- 在聊天中，可以发送文字、语音、表情、图片、短视频、红包。\n" +
                     "- 支持快捷短语回复。\n" +
@@ -209,7 +215,7 @@ public class Select {
                     "- 物流小助手和交易小助手，及时查看订单和物流信息。\n" +
                     "- 扫一扫，可以直接登录PC旺旺。\n" +
                     "- 店铺联系人，快速查看我关注的店铺上新和最近交易订单。\n" +
-                    "- 服务窗，自助菜单更方便，聊天背景更有爱。","http://apk.hiapk.com/appdown/com.alibaba.mobileim?em=5&p=android&f_name=旺信"),
+                    "- 服务窗，自助菜单更方便，聊天背景更有爱。","http://apk.hiapk.com/appdown/com.alibaba.mobileim?em=5&p=android&f_name=旺信",R.drawable.wangxl),
             new Select("美颜相机",R.drawable.myxj,55.51,"-全球首款专为爱美人士定制的自拍神器，美图公司荣誉出品\n" +
                     "-Angelababy强势代言，众明星倾力推荐\n" +
                     "-已拥有超4亿用户，每月产生照片38.7亿张\n" +
@@ -231,8 +237,8 @@ public class Select {
                     "【缩小鼻翼】\n" +
                     "拉动滑竿，秒变精致小鼻翼，自然挺鼻梁！\n" +
                     "【高级柔焦】\n" +
-                    "智能抠图、虚化背景，电影柔焦！更有人气颇高的马赛克效果哟~","http://apk.hiapk.com/appdown/com.meitu.meiyancamera?em=5&p=android&f_name=美颜相机"),
-            new Select("铁路12306",R.drawable.tl,18.36,"铁路12306”是中国铁路客户服务中心推出的官方手机购票应用软件，与www.12306.cn网站共享用户、订单和票额等信息，并使用统一的购票业务规则，软件具有车票预订、在线支付、改签、退票、订单查询、常用联系人管理、个人资料修改、密码修改等功能，为旅客提供方便快捷的手机购票全新体验。\n"+" 产品特色：\n"+" 1.本软件为官方购票软件，数据及时准确，交易安全可靠。\n"+" 2.与www.12306.cn网站购票功能保持同步，可在手机和网站之间交叉办理购票、退票、改签等业务。\n"+" 3.支持工商银行、农业银行、中国银行、建设银行、招商银行、中国银联、中铁银通卡、支付宝支付。","http://apk.hiapk.com/appdown/com.MobileTicket?em=5&p=android&f_name=铁路12306"),
+                    "智能抠图、虚化背景，电影柔焦！更有人气颇高的马赛克效果哟~","http://apk.hiapk.com/appdown/com.meitu.meiyancamera?em=5&p=android&f_name=美颜相机",R.drawable.myxjl),
+            new Select("铁路12306",R.drawable.tl,18.36,"铁路12306”是中国铁路客户服务中心推出的官方手机购票应用软件，与www.12306.cn网站共享用户、订单和票额等信息，并使用统一的购票业务规则，软件具有车票预订、在线支付、改签、退票、订单查询、常用联系人管理、个人资料修改、密码修改等功能，为旅客提供方便快捷的手机购票全新体验。\n"+" 产品特色：\n"+" 1.本软件为官方购票软件，数据及时准确，交易安全可靠。\n"+" 2.与www.12306.cn网站购票功能保持同步，可在手机和网站之间交叉办理购票、退票、改签等业务。\n"+" 3.支持工商银行、农业银行、中国银行、建设银行、招商银行、中国银联、中铁银通卡、支付宝支付。","http://apk.hiapk.com/appdown/com.MobileTicket?em=5&p=android&f_name=铁路12306",R.drawable.tielu),
             new Select("央视新闻",R.drawable.ys,16.71,"本应用为中央电视台新闻中心官方客户端。\n" +
                     "提供丰富的新闻资讯直播、点播、预告、搜索、和分享服务，24小时滚动更新，让你随时随地获取新闻资讯。\n" +
                     "1、独家新闻视频，遍布全球的记者，重大新闻权威发布，突发事件及时播报。 \n" +
@@ -240,7 +246,7 @@ public class Select {
                     "3、王牌新闻栏目，央视权威评论，关注民生话题，追踪热点新闻。 \n" +
                     "4、“发现”走入生活，关注民生，“吃喝玩乐用”全服务。 \n" +
                     "5、支持微博，微信，QQ第三方快捷登录，精彩新闻一键分享。 \n" +
-                    "6、语音播报，听电视，完美的收听体验让您解放双手双眼随时随地听新闻。","http://apk.hiapk.com/appdown/cn.cntvnews?em=5&p=android&f_name=央视新闻"),
+                    "6、语音播报，听电视，完美的收听体验让您解放双手双眼随时随地听新闻。","http://apk.hiapk.com/appdown/cn.cntvnews?em=5&p=android&f_name=央视新闻",R.drawable.ysl),
             new Select("人人网",R.drawable.rrw,23.46,"2005-2014 你的校园一直在这儿。\n" +
                     "中国最大的实名制SNS网络平台，大学生必备网络社交应用。\n" +
                     "-------我们好像在哪儿见过-------\n" +
@@ -248,7 +254,7 @@ public class Select {
                     "\uF06E\t花开半夏，在新鲜事里和好友分享彼此的生活点滴，我们渺小如星辰，却真实存在着\n" +
                     "\uF06E\t花花世界，这里的人貌似不疯不成活，蛇精病短视频、激萌语音照片，芝麻烂谷飚日志\n" +
                     "\uF06E\t一叶知秋，喜欢上了每天看人人话题、看世界，公共主页、我知道这个世界有多大我们就得担负多大。\n" +
-                    "\uF06E\t漫天雪花：不知什么时候，习惯上了回顾过去，三千前，五年前，我们无知无畏，无所不能，每个样子，都好像在哪儿见过。","http://apk.hiapk.com/appdown/com.renren.mobile.apad?em=5&p=android&f_name=人人网HD"),
+                    "\uF06E\t漫天雪花：不知什么时候，习惯上了回顾过去，三千前，五年前，我们无知无畏，无所不能，每个样子，都好像在哪儿见过。","http://apk.hiapk.com/appdown/com.renren.mobile.apad?em=5&p=android&f_name=人人网HD",R.drawable.rrl),
             new Select("迅雷",R.drawable.xl,33.27,"----特色功能---- \n" +
                     "1.智能找片： 全网搜索让大片自动现身，传统浏览器找片太慢太累啦！ \n" +
                     "2.高速下片： 独家下载加速技术让下载快到爆，冷门资源网络封杀通通解决。 \n" +
@@ -262,7 +268,7 @@ public class Select {
                     "电影：魔兽、奇幻森林、唐人街探案、x战警天启； \n" +
                     "电视剧：余罪、女妃名医传、太阳的后裔； \n" +
                     "综艺：快乐大本营、极限挑战、我是歌手4； \n" +
-                    "动漫：航海王、死神、名侦探柯南、火影忍者；","http://apk.hiapk.com/appdown/com.xunlei.downloadprovider?em=5&p=android&f_name=迅雷"),
+                    "动漫：航海王、死神、名侦探柯南、火影忍者；","http://apk.hiapk.com/appdown/com.xunlei.downloadprovider?em=5&p=android&f_name=迅雷",R.drawable.xunlei),
             new Select("艺龙旅行",R.drawable.yl,42.84,"【酒店】\n" +
                     "资源丰富：全球75万家酒店任你挑！知名酒店品牌直签，经济型连锁酒店预定专享；无论是高大上如洲际、万豪、雅高、喜达屋，皇冠假日，香格里拉的豪华高星、文艺小清新范儿十足的三亚、丽江、凤凰、乌镇特色客栈/民宿还是“经济适用”的七天、如家、汉庭、莫泰、锦江之星、格林豪泰式快捷酒店，想住就住，有钱，任性；\n" +
                     "贴心服务：优质客服中心，6年品质值得信赖！ 7X24小时无间断，极速确认，到店无房赔付首晚房费； \n" +
@@ -274,7 +280,7 @@ public class Select {
                     "特价预定：航空公司即时报价，特价机票一手信息全掌握； \n" +
                     "套餐优惠：往返机票更有套餐组合，为你量身打造最优方案，20%额外优惠轻松享；\n" +
                     " \n" +
-                    "作为中国优质的在线旅行服务提供商之一，除了专业的酒店住宿预订之外，艺龙旅行网还提供机票、火车票、租车用车、团购等全方位的旅行产品预订服务，随时出发，“艺”路轻松！","http://apk.hiapk.com/appdown/com.dp.android.elong?em=5&p=android&f_name=艺龙旅行"),
+                    "作为中国优质的在线旅行服务提供商之一，除了专业的酒店住宿预订之外，艺龙旅行网还提供机票、火车票、租车用车、团购等全方位的旅行产品预订服务，随时出发，“艺”路轻松！","http://apk.hiapk.com/appdown/com.dp.android.elong?em=5&p=android&f_name=艺龙旅行",R.drawable.yll),
             new Select("猎豹浏览器",R.drawable.lb,13.68,"【新闻】个性化新闻资讯，给你想看的内容，用猎豹知天下\n" +
                     "\n" +
                     "【视频】结合“头牌”资源，火爆视频大放送，鬼吹灯、利先生等你来看\n" +
@@ -285,14 +291,14 @@ public class Select {
                     "\n" +
                     "【安全】拒绝广告、告别中毒，多重保护，网购舒心、使用安心\n" +
                     "\n" +
-                    "【省流量】拦截无效信息，智能加载资源，告别流量不足","http://apk.hiapk.com/appdown/com.ijinshan.browser_fast?em=5&p=android&f_name=猎豹浏览器"),
+                    "【省流量】拦截无效信息，智能加载资源，告别流量不足","http://apk.hiapk.com/appdown/com.ijinshan.browser_fast?em=5&p=android&f_name=猎豹浏览器",R.drawable.lbl),
             new Select("QQ音乐",R.drawable.qqyy,28.02,"【千万正版高品质乐库】：收录千万量级的正版高品质音乐，让你畅享听觉盛宴。\n" +
                     "【全新发现页，寻回初见音乐的喜悦】精选推荐的音乐杂志和专栏 ，带你发现更多好音乐。\n" +
                     "【智能推荐帮你轻松发现音乐】：提供猜你喜欢、新歌首发、歌单广场、排行榜等多种推荐方式，让你更轻松地发现喜欢的音乐。\n" +
-                    "【融入社交让音乐更多惊喜互动】：可以点歌给QQ/微信好友，述说你的音乐故事，可以将音乐分享到朋友圈、微博、空间，表达你的音乐心情，还可以聆听好友分享，邂逅音乐惊喜。","http://apk.hiapk.com/appdown/com.tencent.qqmusic?em=5&p=android&f_name=QQ音乐"),
+                    "【融入社交让音乐更多惊喜互动】：可以点歌给QQ/微信好友，述说你的音乐故事，可以将音乐分享到朋友圈、微博、空间，表达你的音乐心情，还可以聆听好友分享，邂逅音乐惊喜。","http://apk.hiapk.com/appdown/com.tencent.qqmusic?em=5&p=android&f_name=QQ音乐",R.drawable.qqyyl),
             new Select("新浪微博",R.drawable.xlwb,46.84,"【微博故事】\n" +
                     "微博有了新玩法！微博故事让你快速记录并分享生活中的任意时刻，只需两步即可发布一段15秒视频或一张照片，故事内容24小时后消失不留痕迹。\n" +
-                    "快去微博故事围观明星真实生活——美食达人陈赫、萌宠主播papi酱、健身超人李晨。看美女、宠物、旅行、美食、健身等好玩有趣的生活视频，尽在微博故事。","http://apk.hiapk.com/appdown/com.sina.weibo?em=5&p=android&f_name=微博"),
+                    "快去微博故事围观明星真实生活——美食达人陈赫、萌宠主播papi酱、健身超人李晨。看美女、宠物、旅行、美食、健身等好玩有趣的生活视频，尽在微博故事。","http://apk.hiapk.com/appdown/com.sina.weibo?em=5&p=android&f_name=微博",R.drawable.weibo),
             new Select("人民日报",R.drawable.rmrb,33.21,"*新闻\n" +
                     "随时随地为您提供有速度、有热度、有温度、有态度的新闻。\n" +
                     "*评论\n" +
@@ -308,13 +314,13 @@ public class Select {
                     "*公益\n" +
                     "公益频道增加调查、投票等功能，只需一“点”爱心，汇聚公益洪流。\n" +
                     "*视觉\n" +
-                    "新颖别致的版块划分，让界面更加简洁、清新，独树一帜。","http://apk.hiapk.com/appdown/com.peopledailychina.activity?em=5&p=android&f_name=人民日报"),
+                    "新颖别致的版块划分，让界面更加简洁、清新，独树一帜。","http://apk.hiapk.com/appdown/com.peopledailychina.activity?em=5&p=android&f_name=人民日报",R.drawable.rmrbl),
             new Select("携程旅行",R.drawable.xc,52.27,"携程旅行——携程在手，说走就走\n" +
                     "\n" +
                     "作为领先的在线旅行服务公司，携程旅行手机客户端提供国内110000余家酒店和酒店式公寓，海外600000余家酒店，国内所有航线和国际绝大多数主流航线机票，国内所有线路火车票，国内500余个城市200000余条线路的长途汽车票，国内超过150个城市和海外超过500个城市的机场接送机及自驾租车，覆盖285个城市约20万代驾司机服务，提供超实惠的景点门票等预订服务，更有旅游度假、主题旅游套餐、景点门票优惠、旅游攻略、旅行购物指南、旅行WiFi等一站式旅行服务，助你实现说走就走的旅行梦想。\n" +
                     "\n" +
                     "【携程旅行】\n" +
-                    "随时随地预订酒店、机票、火车票、汽车票、景点门票、用车，团购、跟团游、周末游、自由行、自驾游、邮轮、旅游度假产品任您选！畅享旅游攻略、旅游保险、旅行特惠。出行、旅游不用愁！","http://apk.hiapk.com/appdown/ctrip.android.view?em=5&p=android&f_name=携程旅行"),
+                    "随时随地预订酒店、机票、火车票、汽车票、景点门票、用车，团购、跟团游、周末游、自由行、自驾游、邮轮、旅游度假产品任您选！畅享旅游攻略、旅游保险、旅行特惠。出行、旅游不用愁！","http://apk.hiapk.com/appdown/ctrip.android.view?em=5&p=android&f_name=携程旅行",R.drawable.xcl),
             new Select("我叫MT",R.drawable.wjmt,85.46,"《我叫MT》标准版专为1000元以下安卓手机设置，超小安装包，让您一样能体验游戏的畅快淋漓！   《我叫MT》是根据经典动漫\"我叫MT\"改编的第一款iOS网游。游戏完全还原了动漫中的人物角色，各大经典副本的BOSS也将以独特的方式展现在玩家面前。无论你是魔兽玩家群还是MT迷，都可以在游戏当中找到一种全新的感觉，在这里玩家将和&ldquo;菊爆大队&rdquo;的队员们一起，以一种崭新的方式重新体验艾泽拉斯的冒险之旅。   \n" +
                     "\n" +
                     "&ldquo;冲啊&hellip;&hellip;&rdquo;强力MT来啦，为了荣誉而战！         \n" +
@@ -326,7 +332,7 @@ public class Select {
                     "★ 经典的副本再现，全自动的战斗模式。\n" +
                     "★ 与好友协力共同组建强大的队伍。\n" +
                     "★ 丰富的进化养成系统。         \n" +
-                    "-   在百度玩手机游戏，你就是★百度星玩家★-   游戏多，福利更多！-   敬请关注&ldquo;百度星玩家&rdquo;微信号（微信搜索：Baidustars），更多礼包特权随手掌握！-   同名百度贴吧、新浪微博、腾讯微博现已开通，各类手游福利持续发放中。","http://apk.hiapk.com/appdown/com.locojoy.nd91.immt_a_chs.standard?em=5&p=android&f_name=我叫MT%20标准版"),
+                    "-   在百度玩手机游戏，你就是★百度星玩家★-   游戏多，福利更多！-   敬请关注&ldquo;百度星玩家&rdquo;微信号（微信搜索：Baidustars），更多礼包特权随手掌握！-   同名百度贴吧、新浪微博、腾讯微博现已开通，各类手游福利持续发放中。","http://apk.hiapk.com/appdown/com.locojoy.nd91.immt_a_chs.standard?em=5&p=android&f_name=我叫MT%20标准版",R.drawable.wjmtl),
             new Select("OFO共享单车",R.drawable.ofo,14.19,"小黄车来啦~ofo共享单车是全新的城市代步工具，人称小黄车，为您解决一公里的难题。\n" +
                     "抱怨，新单车屡买屡丢？\n" +
                     "苦恼，茫茫车海找不到“座驾”？\n" +
@@ -355,7 +361,7 @@ public class Select {
                     "\n" +
                     "【放心可靠】\n" +
                     "\n" +
-                    "我们为每一位规范用车的用户提供意外险，让您的出行更加安心。","http://apk.hiapk.com/appdown/so.ofo.labofo?em=5&p=android&f_name=ofo共享单车"),
+                    "我们为每一位规范用车的用户提供意外险，让您的出行更加安心。","http://apk.hiapk.com/appdown/so.ofo.labofo?em=5&p=android&f_name=ofo共享单车",R.drawable.ofol),
             new Select("网易云音乐",R.drawable.wyy,29.66,"3亿用户推荐，口碑爆棚的音乐APP！\n" +
                     "畅听正版： 跨界歌王2、《欢乐颂2》OST、我想和你唱、朴树全新专辑等独家音源！新增快乐男声版权。\n" +
                     "【千万曲库】，超全华语欧美日韩、电音ACG古风等超全音乐种类，广泛涵盖Jay、陈奕迅、薛之谦、林俊杰、王菲、李荣浩、邓紫棋等热门歌手新歌\n" +
@@ -369,11 +375,11 @@ public class Select {
                     "【专业解读】，数千明星专访、电台节目、专业音乐人士每周向你解读每周全球音乐动态；\n" +
                     "【有爱的客服】有问题，找7×12小时客服。要斗图，客服表情包不输你哦！\n" +
                     " \n" +
-                    "下载网易云音乐，开启欲罢不能的音乐之旅！","http://apk.hiapk.com/appdown/com.netease.cloudmusic?em=5&p=android&f_name=网易云音乐"),
+                    "下载网易云音乐，开启欲罢不能的音乐之旅！","http://apk.hiapk.com/appdown/com.netease.cloudmusic?em=5&p=android&f_name=网易云音乐",R.drawable.wangyiyun),
             new Select("ES文件浏览器",R.drawable.es,13.67,"ES，全球主动下载超过2亿次，安卓文件管理第一品牌。\n" +
                     "想更好地管理你的手机、平板、家里电脑和云端网盘？原生中文支持，全球上亿用户一致选择的最强安卓文件管理器！\n" +
                     "点击就可以播放音乐，点击就可以播放视频，点击就可以查看图片，点击就可以阅读文档，点击就可以安装应用，点击就可以查看压缩，点击就可以进行搜索，点击就可以更改视图，\n" +
-                    "还有海量的网盘空间可以存放数据。","http://apk.hiapk.com/appdown/com.estrongs.android.pop?em=5&p=android&f_name=ES文件浏览器"),
+                    "还有海量的网盘空间可以存放数据。","http://apk.hiapk.com/appdown/com.estrongs.android.pop?em=5&p=android&f_name=ES文件浏览器",R.drawable.esl),
             new Select("凤凰新闻",R.drawable.fhxw,13.94,"好用的新闻客户端一定快、准、狠，让你在票圈畅谈selfie美颜技巧、预测软妹币涨跌。无论是美妆发烧友还是辣妈奶爸，无论是养生达人还是二次元控，无论是高管大咖还是创业先锋，你需要的，都在这里。\n" +
                     "\n" +
                     "〖要闻和兴趣模式一键切换〗\n" +
@@ -389,5 +395,7 @@ public class Select {
                     "24小时不间断值守，只为推荐全球热辣新闻爆料，带你直击事件现场。\n" +
                     " \n" +
                     "〖卫视、FM电台频道〗\n" +
-                    "突出卫视频道，忠粉一键直达，用敲舒服的姿势围观名嘴吐槽调侃。","http://apk.hiapk.com/appdown/com.ifeng.news2?em=5&p=android&f_name=凤凰新闻")};
+                    "突出卫视频道，忠粉一键直达，用敲舒服的姿势围观名嘴吐槽调侃。","http://apk.hiapk.com/appdown/com.ifeng.news2?em=5&p=android&f_name=凤凰新闻",R.drawable.fhxwl)
+
+    };
 }

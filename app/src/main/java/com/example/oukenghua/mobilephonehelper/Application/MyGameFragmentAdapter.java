@@ -17,7 +17,6 @@ public class MyGameFragmentAdapter extends FragmentPagerAdapter {
     private List<String> list;
 
     public MyGameFragmentAdapter(FragmentManager fm, List<String> list){
-
         super(fm);
         this.list = list;
 
@@ -30,7 +29,7 @@ public class MyGameFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return AppManageFragment.newInstance(position + 1);
+        return Games.newInstance(position + 1);
     }
 
     @Override

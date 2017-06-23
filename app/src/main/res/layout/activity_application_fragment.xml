@@ -8,7 +8,7 @@
     tools:context="com.example.oukenghua.mobilephonehelper.Application.ApplicationFragment">
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/tabLayout_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMode="scrollable"
@@ -16,7 +16,7 @@
         app:tabIndicatorColor="@color/colorPrimary"/>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/viewPager_app"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

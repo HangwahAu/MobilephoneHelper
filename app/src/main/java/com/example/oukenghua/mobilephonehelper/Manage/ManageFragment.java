@@ -37,12 +37,12 @@ public class ManageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_manage_fragment,container,false);
-        Bundle bundle = getArguments();
-        String args1 = bundle.getString("args1");
+        //Bundle bundle = getArguments();
+        //String args1 = bundle.getString("args1");
         pager = (ViewPager)view.findViewById(R.id.viewPager);
         tab = (TabLayout)view.findViewById(R.id.tabLayout);
         initData();
-        MyAppFragmentAdapter adapter = new MyAppFragmentAdapter(getChildFragmentManager(),list);
+        MyAppFragmentAdapter adapter = new MyAppFragmentAdapter(getFragmentManager(),list);
         pager.setAdapter(adapter);
         tab.setupWithViewPager(pager);
         return view;

@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.oukenghua.mobilephonehelper.Manage.MyAppFragmentAdapter;
 import com.example.oukenghua.mobilephonehelper.R;
+import com.example.oukenghua.mobilephonehelper.Selection.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +21,7 @@ public class ApplicationFragment extends Fragment {
     private TabLayout tab;
     private ViewPager pager;
     private List<String> list;
+
 
     public static ApplicationFragment newInstance(String param1){
         ApplicationFragment fragment = new ApplicationFragment();
@@ -37,18 +38,19 @@ public class ApplicationFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_application_fragment,container,false);
-        Bundle bundle = getArguments();
-        String args1 = bundle.getString("args1");
-        pager = (ViewPager)view.findViewById(R.id.viewPager);
-        tab = (TabLayout)view.findViewById(R.id.tabLayout);
+        //Bundle bundle = getArguments();
+        //String args1 = bundle.getString("args1");
+
+        pager = (ViewPager)view.findViewById(R.id.viewPager_app);
+        tab = (TabLayout)view.findViewById(R.id.tabLayout_app);
         initData();
-        MyAppFragmentAdapter adapter = new MyAppFragmentAdapter(getChildFragmentManager(),list);
+        MyGameFragmentAdapter adapter = new MyGameFragmentAdapter(getChildFragmentManager(),list);
         pager.setAdapter(adapter);
         tab.setupWithViewPager(pager);
+
         return view;
     }
 
