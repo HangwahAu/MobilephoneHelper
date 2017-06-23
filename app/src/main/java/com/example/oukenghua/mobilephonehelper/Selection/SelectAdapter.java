@@ -62,6 +62,7 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
                 intent.putExtra("Size",select.getSize());
                 intent.putExtra(SelectActivity.SELECT_NAME,select.getName());
                 intent.putExtra(SelectActivity.SELECT_IMAGE_ID,select.getImageId());
+                intent.putExtra("Url",select.getLink());
                 intent.putExtra("Content",select.getContent());
                 mContext.startActivity(intent);
             }

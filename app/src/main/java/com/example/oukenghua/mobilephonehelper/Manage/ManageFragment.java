@@ -51,8 +51,8 @@ public class ManageFragment extends Fragment {
     private void initData(){
 
         list = new ArrayList<>();
-        list.add("应用");
-        list.add("文件");
+        list.add("下载");
+        list.add("手机");
 
     }
 
