@@ -5,8 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -20,21 +18,23 @@
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.content.Intent.ACTION_VIEW"/>
+                <action android:name="android.content.Intent.ACTION_VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".SelectActivity">
-            <action android:name="android.content.Intent.ACTION_VIEW"/>
+            <action android:name="android.content.Intent.ACTION_VIEW" />
         </activity>
+
         <provider
-            android:authorities="com.example.oukenghua.mobilephonehelper.fileprovider"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.oukenghua.mobilephonehelper.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
 
         <receiver
@@ -44,11 +44,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
-                <action android:name="android.content.Intent.ACTION_VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.content.Intent.ACTION_VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".Manage.DownloadActivity" />
+        <activity android:name=".Manage.CleanActivity" />
+        <activity android:name=".Manage.UnistallActivity"></activity>
     </application>
 
 </manifest>

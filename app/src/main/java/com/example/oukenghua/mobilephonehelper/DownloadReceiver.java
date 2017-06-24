@@ -12,7 +12,11 @@ import android.os.Build;
 import android.support.v4.content.FileProvider;
 import android.widget.Toast;
 
+import com.example.oukenghua.mobilephonehelper.Manage.Download;
+import com.example.oukenghua.mobilephonehelper.Manage.DownloadActivity;
+
 import java.io.File;
+import java.text.SimpleDateFormat;
 
 public class DownloadReceiver extends BroadcastReceiver {
 
@@ -53,6 +57,9 @@ public class DownloadReceiver extends BroadcastReceiver {
                 if(fileName != null){
                     Toast.makeText(context,"下载完成",Toast.LENGTH_SHORT).show();
                     File file = new File(fileName);
+                    //String name = fileName.substring(fileName.lastIndexOf("="));
+                    //name = name.replace("=","");
+                    SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                     if(file.getName().endsWith(".apk")){
                         /*Intent intent1 = new Intent();
                         intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -69,6 +76,9 @@ public class DownloadReceiver extends BroadcastReceiver {
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         i.setDataAndType(Uri.fromFile(new File(fileName)), "application/vnd.android.package-archive");
                         context.startActivity(i);
+
+                        String time = sDateFormat.format(new java.util.Date());
+                        DownloadActivity.downloadList.add(new Download(fileName,time));
                     }
                 }
             }
