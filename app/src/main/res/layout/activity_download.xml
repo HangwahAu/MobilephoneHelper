@@ -7,7 +7,6 @@
     tools:context="com.example.oukenghua.mobilephonehelper.Manage.DownloadActivity">
 
     <android.support.design.widget.CoordinatorLayout
-        android:layout_marginBottom="65dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -26,6 +25,12 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
                 >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="已下载"
+                    android:textSize="20sp"/>
 
             </android.support.v7.widget.Toolbar>
 

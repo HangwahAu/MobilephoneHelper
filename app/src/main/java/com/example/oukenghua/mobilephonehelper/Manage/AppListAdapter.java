@@ -75,7 +75,7 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.ViewHold
         final AppBean bean = appList.get(position);
         holder.itemIconIv.setImageDrawable(bean.getIcon());//应用图标
         holder.itemNameTv.setText(bean.getName()); //名称
-        holder.itemPackageTv.setText(bean.getPackageName());
+        holder.itemPackageTv.setText(bean.getPackageName()); //包名
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -50,7 +50,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Manage.DownloadActivity" />
+        <activity android:name=".Manage.DownloadActivity" >
+            <action android:name="android.content.Intent.ACTION_VIEW" />
+        </activity>
         <activity android:name=".Manage.CleanActivity" />
         <activity android:name=".Manage.UninstallActivity"></activity>
     </application>
