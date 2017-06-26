@@ -76,58 +76,72 @@ public class Games extends Fragment {
     }
 
     private void initApp1(){
-        selectList.add(Select.selects[0]);
-        selectList.add(Select.selects[6]);
-        selectList.add(Select.selects[16]);
-        selectList.add(Select.selects[17]);
-        selectList.add(Select.selects[30]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[0]);
+            selectList.add(Select.selects[6]);
+            selectList.add(Select.selects[16]);
+            selectList.add(Select.selects[17]);
+            selectList.add(Select.selects[30]);
+        }
     }
 
     private void initApp2(){
-        selectList.add(Select.selects[3]);
-        selectList.add(Select.selects[9]);
-        selectList.add(Select.selects[11]);
-        selectList.add(Select.selects[26]);
-        selectList.add(Select.selects[32]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[3]);
+            selectList.add(Select.selects[9]);
+            selectList.add(Select.selects[11]);
+            selectList.add(Select.selects[26]);
+            selectList.add(Select.selects[32]);
+        }
     }
 
     private void initApp3(){
-        selectList.add(Select.selects[2]);
-        selectList.add(Select.selects[4]);
-        selectList.add(Select.selects[10]);
-        selectList.add(Select.selects[18]);
-        selectList.add(Select.selects[22]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[2]);
+            selectList.add(Select.selects[4]);
+            selectList.add(Select.selects[10]);
+            selectList.add(Select.selects[18]);
+            selectList.add(Select.selects[22]);
+        }
     }
 
     private void initApp4(){
-        selectList.add(Select.selects[1]);
-        selectList.add(Select.selects[8]);
-        selectList.add(Select.selects[12]);
-        selectList.add(Select.selects[15]);
-        selectList.add(Select.selects[19]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[1]);
+            selectList.add(Select.selects[8]);
+            selectList.add(Select.selects[12]);
+            selectList.add(Select.selects[15]);
+            selectList.add(Select.selects[19]);
+        }
     }
 
     private void initApp5(){
-        selectList.add(Select.selects[14]);
-        selectList.add(Select.selects[21]);
-        selectList.add(Select.selects[27]);
-        selectList.add(Select.selects[28]);
-        selectList.add(Select.selects[34]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[14]);
+            selectList.add(Select.selects[21]);
+            selectList.add(Select.selects[27]);
+            selectList.add(Select.selects[28]);
+            selectList.add(Select.selects[34]);
+        }
     }
 
     private void initApp6(){
-        selectList.add(Select.selects[7]);
-        selectList.add(Select.selects[13]);
-        selectList.add(Select.selects[23]);
-        selectList.add(Select.selects[25]);
-        selectList.add(Select.selects[33]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[7]);
+            selectList.add(Select.selects[13]);
+            selectList.add(Select.selects[23]);
+            selectList.add(Select.selects[25]);
+            selectList.add(Select.selects[33]);
+        }
     }
 
     private void initApp7(){
-        selectList.add(Select.selects[5]);
-        selectList.add(Select.selects[20]);
-        selectList.add(Select.selects[24]);
-        selectList.add(Select.selects[29]);
-        selectList.add(Select.selects[31]);
+        for (int i=0;i<3;i++){
+            selectList.add(Select.selects[5]);
+            selectList.add(Select.selects[20]);
+            selectList.add(Select.selects[24]);
+            selectList.add(Select.selects[29]);
+            selectList.add(Select.selects[31]);
+        }
     }
 }
