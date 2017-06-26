@@ -87,6 +87,15 @@ public class MyAppFragmentAdapter extends RecyclerView.Adapter<MyAppFragmentAdap
                         mContext.startActivity(intent);
                     }
                 });
+                break;
+            case 3:
+                holder.selectView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(mContext,UninstallActivity.class);
+                        mContext.startActivity(intent);
+                    }
+                });
         }
     }
 
