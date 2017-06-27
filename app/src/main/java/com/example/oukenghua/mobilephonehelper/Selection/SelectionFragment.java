@@ -14,13 +14,17 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.oukenghua.mobilephonehelper.R;
 
@@ -31,13 +35,27 @@ import java.util.List;
 import com.example.oukenghua.mobilephonehelper.Selection.Select;
 
 
-public class SelectionFragment extends Fragment {
+public class SelectionFragment extends Fragment implements SearchView.OnQueryTextListener{
 
 
     private List<Select> selectList = new ArrayList<>();
     private SelectAdapter adapter;
 
     private SwipeRefreshLayout swipeRefresh;
+
+    SearchView searchView;
+    ListView listView;
+    private final String[] appName={"王者荣耀","捕鱼达人","斗地主","消消乐","我叫MT",
+        "凤凰新闻","虎扑体育","人民日报","新浪微博","央视新闻",
+        "爱奇艺","ACfun","QQ音乐","网易云","优酷",
+        "ES文件浏览器","猎豹浏览器","QQ浏览器","UC浏览器","迅雷",
+        "百度贴吧","QQ","人人网","微信","旺信",
+        "简拼","美图秀秀","美颜自拍","天天P图","小影",
+        "ofo共享单车","去哪儿旅行","铁路","携程旅行","艺龙旅行"};
+
+    /*private ListView listView;
+    ArrayAdapter<String> mAdapter;
+    ArrayList<String> list;*/
 
     private View rootView = null;//缓存Fragment view
 
@@ -92,7 +110,62 @@ public class SelectionFragment extends Fragment {
 
         setHasOptionsMenu(true);
 
+        //init();
+        listView = (ListView)rootView.findViewById(R.id.listView);
+
+        listView.setTextFilterEnabled(true);//可以被过滤
+        searchView = (SearchView)rootView.findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(this);
         return rootView;
+    }
+
+    /*private void init(){
+        listView = (ListView)rootView.findViewById(R.id.listView);
+        list = new ArrayList<String>();
+        list.add("王者荣耀");list.add("捕鱼达人");list.add("斗地主");list.add("消消乐");list.add("我叫MT");
+        list.add("凤凰新闻");list.add("虎扑体育");list.add("人民日报");list.add("新浪微博");list.add("央视新闻");
+        list.add("爱奇艺");list.add("ACfun");list.add("QQ音乐");list.add("网易云");list.add("优酷");
+        list.add("ES文件浏览器");list.add("猎豹浏览器");list.add("QQ浏览器");list.add("UC浏览器");list.add("迅雷");
+        list.add("百度贴吧");list.add("QQ");list.add("人人网");list.add("微信");list.add("旺信");
+        list.add("简拼");list.add("美图秀秀");list.add("美颜自拍");list.add("天天P图");list.add("小影");
+        list.add("ofo共享单车");list.add("去哪儿旅行");list.add("铁路");list.add("携程旅行");list.add("艺龙旅行");
+
+        SearchView searchView = (SearchView)rootView.findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(this);
+    }*/
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        //Toast.makeText(rootView.getContext(),"您选择的是:"+query,Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        /*listView.bringToFront();
+        listView.setVisibility(View.VISIBLE);
+        if(TextUtils.isEmpty(newText)){
+            listView.clearTextFilter(); //清除过滤
+        }else{
+            listView.bringToFront();
+            listView.setFilterText(newText);
+        }*/
+        //listView.setVisibility(View.VISIBLE);
+        listView.bringToFront();
+        listView.setVisibility(View.VISIBLE);
+        if(TextUtils.isEmpty(newText)){
+            //listView.clearTextFilter(); //清除过滤
+            listView.setAdapter(null);
+        }else {
+            ArrayList<String> showList = new ArrayList<String>();
+            for (int i=0;i<appName.length;i++){
+                if(appName[i].startsWith(newText))
+                    showList.add(appName[i]);
+            }
+            listView.setAdapter(new ArrayAdapter<String>(rootView.getContext(),android.R.layout.simple_list_item_1,showList));
+        }
+
+        return true;
     }
 
     private void refreshSelects(){
