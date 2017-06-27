@@ -9,8 +9,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.oukenghua.mobilephonehelper.Apk;
-import com.example.oukenghua.mobilephonehelper.AppBean;
-import com.example.oukenghua.mobilephonehelper.DownloadApk;
 import com.example.oukenghua.mobilephonehelper.R;
 
 import java.io.File;

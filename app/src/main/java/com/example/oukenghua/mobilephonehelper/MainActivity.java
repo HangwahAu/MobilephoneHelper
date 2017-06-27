@@ -2,6 +2,7 @@ package com.example.oukenghua.mobilephonehelper;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
         bottomNavigationBar = (BottomNavigationBar)findViewById(R.id.bottom_navigation_bar);
         bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.drawable.selection,"精选").setActiveColorResource(R.color.orange))
+                .addItem(new BottomNavigationItem(R.drawable.star,"精选").setActiveColorResource(R.color.orange))
                 .addItem(new BottomNavigationItem(R.drawable.application,"应用").setActiveColorResource(R.color.green))
                 .addItem(new BottomNavigationItem(R.drawable.manage,"管理").setActiveColorResource(R.color.blue))
 
@@ -60,6 +61,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 .initialise();
         bottomNavigationBar.setTabSelectedListener(this);
         setDefaultFragment();
+
+        Intent intent = getIntent();
+        String account = intent.getStringExtra("account");
+        if(account != null){
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            mManageFragment = ManageFragment.newInstance("精选");
+            transaction.replace(R.id.tb,mManageFragment);
+            transaction.commit();
+            ManageFragment.tv.setText(account);
+            //onTabSelected(2);
+            ManageFragment.getData(account);
+            bottomNavigationBar.selectTab(2);
+        }
 
     }
 

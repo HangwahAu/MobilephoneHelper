@@ -8,7 +8,7 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -50,11 +50,12 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Manage.DownloadActivity" >
+        <activity android:name=".Manage.DownloadActivity">
             <action android:name="android.content.Intent.ACTION_VIEW" />
         </activity>
         <activity android:name=".Manage.CleanActivity" />
-        <activity android:name=".Manage.UninstallActivity"></activity>
+        <activity android:name=".Manage.UninstallActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
